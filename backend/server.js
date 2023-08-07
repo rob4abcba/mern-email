@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Route
+app.get("/", (req, res) => {
+  res.send("Home Page Yo");
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}...`);
